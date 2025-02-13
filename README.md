@@ -1,15 +1,10 @@
-PubMed Fetcher
-Overview
+# PubMed Fetcher
+
+## Overview
 PubMed Fetcher is a command-line tool that retrieves research papers from PubMed based on a user query. It identifies papers where at least one author is affiliated with a pharmaceutical or biotech company and outputs the results as a CSV file.
 
-Project Organization
+## Project Organization
 Aganitha_DevOps_Internship_Assignment/ │── pubmed_fetcher/ │ ├── init.py # Module initialization │ ├── fetch.py # Fetches and filters PubMed research papers │ ├── helpers.py # Utility functions │── main.py # Command-line interface │── pyproject.toml # Poetry configuration │── README.md # Documentation │── .gitignore # Ignore unnecessary files
-
-yaml
-Copy
-Edit
-
----
 
 ## Installation
 This project uses [Poetry](https://python-poetry.org/) for dependency management.
@@ -19,23 +14,17 @@ If you don’t have Poetry installed, install it using:
 ```sh
 pip install poetry
 Step 2: Clone the Repository
-sh
-Copy
-Edit
+
 git clone https://github.com/MeenakshiKVidhyadhar/Aganitha_DevOps_Internship_Assignment.git
 cd Aganitha_DevOps_Internship_Assignment
 Step 3: Install Dependencies
-sh
-Copy
-Edit
+
 poetry install
 Usage
 After installing dependencies, you can run the command-line tool.
 
 Basic Usage
-sh
-Copy
-Edit
+
 poetry run get-papers-list "cancer treatment" --email your@email.com
 Options
 Flag	Description
@@ -44,9 +33,7 @@ Flag	Description
 -f <filename> / --file <filename>	Save output to a CSV file.
 --email <email>	Required: Your email for PubMed API compliance.
 Example Usage
-sh
-Copy
-Edit
+
 poetry run get-papers-list "COVID-19 vaccine" --email example@email.com -f results.csv
 This will fetch relevant papers and save the output to results.csv.
 
@@ -75,14 +62,11 @@ Poetry	Manages dependencies and packaging.
 Publishing to TestPyPI
 To publish the package to TestPyPI, run:
 
-sh
-Copy
-Edit
 poetry build
 poetry publish --repository testpypi
 To install the package from TestPyPI:
 
-sh
-Copy
-Edit
+
 pip install --index-url https://test.pypi.org/simple/ pubmed-fetcher
+What This Project Does
+This project allows users to easily search for research papers on specific topics through the command line. It focuses on retrieving papers where authors are linked to pharmaceutical or biotech companies, making it useful for those interested in industry-related research. The output can be saved in a CSV format for further analysis or record-keeping, providing a practical tool for researchers, students, and professionals in the field of health and medicine.
